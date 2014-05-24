@@ -53,6 +53,7 @@ As Express is based on [connect](http://www.senchalabs.org/connect/)
 app.use([middleware])
 ```
 can be called to use middleware, there are 5:
+
 Middleware | Function 
 --- | ---
 bodyParser | parse client request
