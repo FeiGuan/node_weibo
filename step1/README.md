@@ -45,5 +45,21 @@ basepath | used for 'res.redirect()' | /
 view cache | enable view caching | true
 strict routing | slashes are not ignored when enabled | true
 
+As Express is based on [connect](http://www.senchalabs.org/connect/)
+```javascript
+app.use([middleware])
+```
+can be called to use middleware, there are 5:
+Middleware | Function 
+--- | ---
+bodyParser | parse client request
+methodOverride | customed HTTP method
+router | routing support
+static | static files
+errorHandler | handles error
+
+Then server uses <b>app.get</b> to route the requests, as the controller will expose a function to handle the request by <b>exports.[function_name]=function(req, res){}</b> Finally, launch the server.
+
+
 
 ####--package.json
