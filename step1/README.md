@@ -5,9 +5,9 @@
 ---
 1. Get [node.js](http://nodejs.org/download/) and [npm](https://www.npmjs.org/).
 2. Create directory /step1, cd into it.
-```javascript
-mkdir step1
-```
+...```javascript
+...mkdir step1
+...```
 ```javascript
 cd step1/
 ```
