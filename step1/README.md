@@ -1,7 +1,7 @@
 #Step1
 
 ---
-###Get Express working
+###Build a server based on Express
 ---
 -Get [node.js](http://nodejs.org/download/) and [npm](https://www.npmjs.org/).
 -Create directory /step1, cd into it.
@@ -69,7 +69,7 @@ exports.[function_name]=function(req, res){}
 
 Finally, launch the server.
 
-####routes/index.js
+####--routes/index.js
 Router file, act as controller, make response to the request distributed by server.
 
 <b>res.render()</b> takes the name of template file, and name-value pair of variables as json
@@ -78,14 +78,14 @@ Router file, act as controller, make response to the request distributed by serv
 	res.render('index', {title: 'Express'});
 ```
 
-####views/index.ejs
+####--views/index.ejs
 The template file, using tag <b><%=  %></b> to render referenced variables.
 
 ```html
 	<%= title %>
 ```
 
-###views/layout.ejs
+####--views/layout.ejs
 The extended template file, using tag <b><%- body %></b> containing the unique contents of each template.
 
 ```html
