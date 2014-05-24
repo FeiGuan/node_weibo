@@ -36,8 +36,8 @@ After we get the server object, we should configure it, using <b>app.set</b> pro
 	})
 ```
 What parameters could be set:
-|Key|Value|Example|
-|---|:---:|---:|
-|views|location of view files|__dirname+'/views'|
-|view engine|view template engine|ejs, jade, haml|
+| Key      | Value    | Example |
+| -------  |:--------:| -------:|
+| views    |location of view files|__dirname+'/views'|
+| view engine  | view template engine | ejs, jade, haml |
 ####--package.json
