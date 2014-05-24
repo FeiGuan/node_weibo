@@ -46,5 +46,12 @@ app.get('/user/:username', function(req, res){
 app.put('/user/:username', function(req, res){
 	res.send('Done');
 });
+app.get('/list', function(req, res){
+	res.render('list', {
+		title: 'List',
+		items: [1990, 'fei', 'express', 'Node.js']
+	});
+};
+
 app.listen(3000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

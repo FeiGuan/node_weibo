@@ -35,4 +35,13 @@ res.render('[embedded ejs]', {[var name]:[var value], layout:[layout ejs]});
 when translating embedded template, it will apply to the template file as layout
 layout.ejs is the default template ejs file, and layout attribute is optional.
 
--4. 
+-4. Partial view:<br />
+In <b>list.ejs</b>:
+```html
+	<ul><%- partial('listitem', items) %></ul>
+```
+In <b>listitem.ejs</b>
+```html
+	<li><%= listitem %></li>
+```
+`partial` takes two parameters, the first is the partial view name, the second is the passed object array, elements of the array will be applied to partial view iterately.
