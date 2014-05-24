@@ -24,6 +24,9 @@ node app.js
 ```
 -Server running on localhost:3000. Use your browser to see the results.
 ***
+####--package.json
+We use Express 2.5.8 and ejs template.
+
 ####--app.js
 First, get server object from Express:
 ```javascript
@@ -58,8 +61,34 @@ router | routing support
 static | static files
 errorHandler | handles error
 
-Then server uses <b>app.get</b> to route the requests, as the controller will expose a function to handle the request by <b>exports.[function_name]=function(req, res){}</b> Finally, launch the server.
+Then server uses <b>app.get</b> to route the requests, as the controller will expose a function to handle the request by 
+```javascript
+exports.[function_name]=function(req, res){}
+```
+
+Finally, launch the server.
+
+####routes/index.js
+Router file, act as controller, make response to the request distributed by server.
+
+<b>res.render()</b> takes the name of template file, and name-value pair of variables as json
+
+```javascript
+	res.render('index', {title: 'Express'});
+```
+
+####views/index.ejs
+The template file, using tag <b><%=  %></b> to render referenced variables.
+
+```html
+	<%= title %>
+```
+
+###views/layout.ejs
+The extended template file, using tag <b><%- body %></b> containing the unique contents of each template.
+
+```html
+	<%- body %>
+```
 
 
-
-####--package.json
