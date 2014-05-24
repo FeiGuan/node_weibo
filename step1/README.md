@@ -37,15 +37,13 @@ After we get the server object, we should configure it, using <b>app.set</b> pro
 ```
 What parameters could be set:
 
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
-
 Key | Value | Example
 --- | --- | ---
 views | location of view files | __dirname+'/views'
 view engine | view template engine | ejs, jade, haml
+basepath | used for 'res.redirect()' | /
+view cache | enable view caching | true
+strict routing | slashes are not ignored when enabled | true
 
 
 ####--package.json
