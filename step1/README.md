@@ -3,26 +3,26 @@
 ---
 ###Get Express working
 ---
-Get [node.js](http://nodejs.org/download/) and [npm](https://www.npmjs.org/).
-Create directory /step1, cd into it.
+-Get [node.js](http://nodejs.org/download/) and [npm](https://www.npmjs.org/).
+-Create directory /step1, cd into it.
 ```javascript
 mkdir step1
 ```
 ```javascript
 cd step1/
 ```
-Create a file package.json, write in the basic info of the project.
+-Create a file package.json, write in the basic info of the project.
 In terminal, type in 
 ```javascript
 npm install 
 ```
 to install all modules.
-Create file app.js, write in the server code.
+-Create file app.js, write in the server code.
 In terminal, type in
 ```javascript
 node app.js
 ```
-Server running on localhost:3000. Use your browser to see the results.
+-Server running on localhost:3000. Use your browser to see the results.
 ***
 ####--app.js
 First, get server object from Express:
