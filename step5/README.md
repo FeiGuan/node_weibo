@@ -12,7 +12,7 @@ mongo
 to connect to database<br />
 
 Useful commands:<br /><br />
-<b>Database manipulation</b>
+<b>Database manipulation<b/>
 display the curent database
 ```javascript
 db
@@ -74,4 +74,25 @@ _id is a unique value assigned to the document
 
 save(): [if you provide _id in the document, it will update. If you don't it will insert](http://alvinalexander.com/source-code/scala/mongodb-whats-difference-between-save-and-insert-mongodb)
 <br /><br />
-<b>Query</b>
+<b>Query<b/>
+<br />
+AND Condition: use , to separate conditions
+```javascript
+db.testData.find({type : 'find', price : {$lt: 9}})
+```
+OR Condition: use $or: [] to include the conditions
+```javascript
+db.testData.find(
+	{ $or: [
+		{ qty: {$gt: 100}},
+		{ price: {$lt: 9}}
+		]
+	}
+)
+```
+Comparison Operators:<br />
+$gt $gte $in $lt $lte $ne $nin< br />
+<b>remove<b/>
+```javascript
+db.testDate.remove({type : 'food'})
+```
