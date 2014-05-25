@@ -74,7 +74,7 @@ _id is a unique value assigned to the document
 
 save(): [if you provide _id in the document, it will update. If you don't it will insert](http://alvinalexander.com/source-code/scala/mongodb-whats-difference-between-save-and-insert-mongodb)
 <br /><br />
-<b>Query<b/>
+<b>Query</b>
 <br />
 AND Condition: use , to separate conditions
 ```javascript
