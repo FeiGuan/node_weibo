@@ -91,7 +91,8 @@ db.testData.find(
 )
 ```
 Comparison Operators:<br />
-$gt $gte $in $lt $lte $ne $nin < br />
+$gt $gte $in $lt $lte $ne $nin 
+<br />
 <b>remove</b>
 ```javascript
 db.testDate.remove({type : 'food'})
