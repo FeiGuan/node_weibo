@@ -1,4 +1,4 @@
-#Step4-
+#Step4
 
 ###Weibo Design
 ---
@@ -17,4 +17,4 @@ In <b>app.js</b>, add routing rules and in <b>routes/index.js</b>, add callback 
 
 -2. UI Design<br />
 
-![alt text](https://github.com/FeiGuan/node_weibo/blob/master/step4/Screenshot.png "Logo Title Text 1")
+![alt text](https://raw.githubusercontent.com/FeiGuan/node_weibo/master/step4/Screenshot.png "Logo Title Text 1")
