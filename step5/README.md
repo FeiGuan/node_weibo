@@ -11,8 +11,8 @@ mongo
 ```
 to connect to database<br />
 
-Useful commands:<br />
-<br />
+Useful commands:<br /><br />
+<b>Database manipulation</b>
 display the curent database
 ```javascript
 db
@@ -32,6 +32,8 @@ show collections of current database
 ```javascript
 show collections
 ```
+<br />
+<b>Insert and update</b>
 <br />
 create two documents named **j** and **k** in json format
 ```javascript
@@ -70,3 +72,6 @@ _id is a unique value assigned to the document
 <br />
 <br />
 
+save(): [if you provide _id in the document, it will update. If you don't it will insert](http://alvinalexander.com/source-code/scala/mongodb-whats-difference-between-save-and-insert-mongodb)
+<br /><br />
+<b>Query</b>
