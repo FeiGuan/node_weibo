@@ -15,4 +15,6 @@ Path | Page
 
 In <b>app.js</b>, add routing rules and in <b>routes/index.js</b>, add callback functions.
 
--2. UI Design
+-2. UI Design<br />
+
+![alt text]()
