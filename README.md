@@ -12,9 +12,9 @@ Template Engine:
 ####step4
 Design weibo and UI
 ####step5
-Database accessing, Sessions
+Database accessing, User Model, Sessions
 ####step6
-
+Weibo Model
 ___
 
 

@@ -1,6 +1,6 @@
 #Step5
 
-###Database accessing, sessions
+###Database accessing, User model, Sessions
 ---
 ####-1. MongoDB<br />
 [Download MongoDB](http://www.mongodb.org/downloads)<br />
@@ -183,18 +183,18 @@ module.exports = mongoose.model('User', user);
 <b>Logic of login:</b><br/>
 #####check if the username exists, if yes, authenticate
 ```javascript
-		var findUser = User.findOne({username: newUser.username}, function(err, user){
-			if(!user)
-				err = 'User does not exist.';
-			if(newUser.password != user.password)
-				err = "Authentication failed."
-			if(err){
-				req.flash('error', err);
-				return res.redirect('/login');
-			}
-			req.session.user = user;
-			req.flash('success', 'Login success!');
-			res.redirect('/');
-		});
+var findUser = User.findOne({username: newUser.username}, function(err, user){
+	if(!user)
+		err = 'User does not exist.';
+	if(newUser.password != user.password)
+		err = "Authentication failed."
+	if(err){
+		req.flash('error', err);
+		return res.redirect('/login');
+	}
+	req.session.user = user;
+	req.flash('success', 'Login success!');
+	res.redirect('/');
+});
 ```
 

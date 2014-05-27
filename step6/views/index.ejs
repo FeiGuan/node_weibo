@@ -1,0 +1,14 @@
+<% if(!user) {%>
+<div class="jumbotron" style="text-align: center">
+  <p>
+    <h1>Welcome to <span style="font-family: 'Londrina Shadow', cursive">Weibo</span></h1>
+    <p>a system based on Node.js</p>
+    <a class="btn btn-primary btn-large" href="/login">Log in</a>
+    <a class="btn btn-large" href="/reg">Sign up</a>
+  </p>
+</div>	
+<%} else {%>
+  <%- partial('say') %>
+<% } %>
+<%- partial('posts')%>
+  
