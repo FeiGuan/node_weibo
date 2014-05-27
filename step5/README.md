@@ -120,8 +120,11 @@ In <b>app.js</b>, add database cookie parser configuration. So we can get sessio
 ```javascript
 req.session
 ```
-
-####-4. Register and login<br />
+When a user logs in
+```javascript
+req.session.user = user;
+```
+####-4. Register<br />
 <b>Register UI design</b>
 ![alt text](https://raw.githubusercontent.com/FeiGuan/node_weibo/master/step5/Screenshot-register.png "Logo Title Text 1")
 <br />
@@ -139,6 +142,59 @@ Redirect
 ```
 return res.redirect('/reg');
 ```
+#####get hashed password, geneate new user object newUser
+```javascript
+var md5 = crypto.createHash('md5');	// crypto is a nodejs core module
+var password = md5.update(req.body.password).digest('base64');
+```
+#####check if the user exists, if not save new user and update session
+```javascript
+User.get(newUser.name, function(err, user){
+	if(user)
+		err = 'exists';
+	if(err)
+		// handle error
+	newUser.save(function(err){
+		if(err)
+			//handle error
+		req.session.user = newUser;
+		req.redirect('/');
+	})
+})
+```
+<br />
+<b>User model</b>
+In <b>models/user.js</b>
+```javascript
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+var ObjectId = Schema.ObjectId;
 
+var user = new Schema({
+	id: ObjectId
+	, username: String
+	, password: String
+});
 
+module.exports = mongoose.model('User', user);
+```
+<br />
+####-5. Login<br />
+<b>Logic of login:</b><br/>
+#####check if the username exists, if yes, authenticate
+```javascript
+		var findUser = User.findOne({username: newUser.username}, function(err, user){
+			if(!user)
+				err = 'User does not exist.';
+			if(newUser.password != user.password)
+				err = "Authentication failed."
+			if(err){
+				req.flash('error', err);
+				return res.redirect('/login');
+			}
+			req.session.user = user;
+			req.flash('success', 'Login success!');
+			res.redirect('/');
+		});
+```
 
